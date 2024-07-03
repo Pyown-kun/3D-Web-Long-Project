@@ -18,6 +18,35 @@ const Rander = () => {
     garageRotation: [-Math.PI / 2.3, 0, -0.8],
   });
 
+  const updateHome = () => {
+    changeGarage((previousState) => {
+      return {
+        ...previousState,
+        garagePosition: null,
+        garageRotation: [-Math.PI / 2.3, 0, -0.8],
+      };
+    });
+  };
+
+  const updateAbout = () => {
+    changeGarage((previousState) => {
+      return {
+        ...previousState,
+        garageRotation: [-Math.PI / 2.18, 0, 0.6],
+        garagePosition: [0, 0, 1.8],
+      };
+    });
+  };
+
+  const updateProject = () => {
+    changeGarage((previousState) => {
+      return {
+        ...previousState,
+        garageRotation: [-Math.PI / 2.37, 0, -2.65],
+        garagePosition: [0, 0, 1.8],
+      };
+    });
+  };
   // return [garageScale, garagePosition, garageRotation];
 
   // const [garageScale, garagePosition, garageRotation] = adjustGarage();
@@ -47,10 +76,18 @@ const Rander = () => {
           position={garage.garagePosition}
           scale={garage.garageScale}
           rotation={garage.garageRotation}
+
           // isRotating={isRotating}
           // setIsRotating={setIsRotation}
         />
       </Canvas>
+      <div>
+        <button onClick={updateHome}>yahalo</button>
+        <br />
+        <button onClick={updateAbout}>halo</button>
+        <br />
+        <button onClick={updateProject}>Hi</button>
+      </div>
     </section>
   );
 };

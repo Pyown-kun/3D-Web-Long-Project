@@ -9,7 +9,7 @@ Title: Lamborghini Murciélago VT 2001
 import { useRef, useEffect } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
-import { a } from "@react-spring/three";
+import { a, useSpring } from "@react-spring/three";
 
 import garageScene from "../asset/3d/Garage.glb";
 
@@ -21,25 +21,19 @@ export function Garage({ isRotating, setIsRotating, ...props }) {
   return (
     <a.group ref={garageRef} {...props}>
       <mesh
-        geometry={nodes.Object_2.geometry}
-        material={materials.ARCblackmatte}
+        geometry={nodes.jeannearch.geometry}
+        material={materials.jeanne_arch}
+        position={[1.077, 0.799, 0.519]}
+        rotation={[-Math.PI, 0, -Math.PI / 2]}
+        scale={0.866}
       />
       <mesh
-        geometry={nodes.Object_3.geometry}
-        material={materials.ARCblackplastic}
+        geometry={nodes.jeannearch001.geometry}
+        material={materials["jeanne_arch.001"]}
+        position={[-1.139, 0.794, 0.571]}
+        rotation={[-Math.PI, 0, -Math.PI / 2]}
+        scale={0.894}
       />
-      <mesh geometry={nodes.Object_4.geometry} material={materials.ARClogo} />
-      <mesh geometry={nodes.Object_5.geometry} material={materials.ARCmetall} />
-      <mesh geometry={nodes.Object_6.geometry} material={materials.Ceiling} />
-      <mesh
-        geometry={nodes.Object_7.geometry}
-        material={materials.Lamborghini_Murcielago_2001_in_Showroom_by_Alex_Ka}
-      />
-      <mesh
-        geometry={nodes.Object_8.geometry}
-        material={materials.Red_curtain}
-      />
-      <mesh geometry={nodes.Object_9.geometry} material={materials.V12__6_2L} />
       <mesh
         geometry={nodes.Object_10.geometry}
         material={materials.black_aluminium}
@@ -75,6 +69,10 @@ export function Garage({ isRotating, setIsRotating, ...props }) {
       />
       <mesh geometry={nodes.Object_19.geometry} material={materials.chrome} />
       <mesh
+        geometry={nodes.Object_2.geometry}
+        material={materials.ARCblackmatte}
+      />
+      <mesh
         geometry={nodes.Object_20.geometry}
         material={materials.chrome_details}
       />
@@ -101,6 +99,10 @@ export function Garage({ isRotating, setIsRotating, ...props }) {
       <mesh
         geometry={nodes.Object_29.geometry}
         material={materials.grill_rear}
+      />
+      <mesh
+        geometry={nodes.Object_3.geometry}
+        material={materials.ARCblackplastic}
       />
       <mesh
         geometry={nodes.Object_30.geometry}
@@ -139,6 +141,7 @@ export function Garage({ isRotating, setIsRotating, ...props }) {
         geometry={nodes.Object_39.geometry}
         material={materials.lamborghini_support_logo}
       />
+      <mesh geometry={nodes.Object_4.geometry} material={materials.ARClogo} />
       <mesh geometry={nodes.Object_40.geometry} material={materials.mats} />
       <mesh geometry={nodes.Object_41.geometry} material={materials.mirrors} />
       <mesh
@@ -164,6 +167,7 @@ export function Garage({ isRotating, setIsRotating, ...props }) {
         material={materials.material_46}
       />
       <mesh geometry={nodes.Object_49.geometry} material={materials.rimbolts} />
+      <mesh geometry={nodes.Object_5.geometry} material={materials.ARCmetall} />
       <mesh geometry={nodes.Object_50.geometry} material={materials.rimlogo} />
       <mesh
         geometry={nodes.Object_51.geometry}
@@ -192,6 +196,30 @@ export function Garage({ isRotating, setIsRotating, ...props }) {
         material={materials.turn_signals}
       />
       <mesh geometry={nodes.Object_59.geometry} material={materials.windo} />
+      <mesh geometry={nodes.Object_6.geometry} material={materials.Ceiling} />
+      <mesh
+        geometry={nodes.Object_7.geometry}
+        material={materials.Lamborghini_Murcielago_2001_in_Showroom_by_Alex_Ka}
+      />
+      <mesh
+        geometry={nodes.Object_8.geometry}
+        material={materials.Red_curtain}
+      />
+      <mesh geometry={nodes.Object_9.geometry} material={materials.V12__6_2L} />
+      <mesh
+        geometry={nodes.pngwingcom.geometry}
+        material={materials["pngwing.com"]}
+        position={[0.91, -0.359, 0.644]}
+        rotation={[-Math.PI / 2, 0, -Math.PI / 2]}
+        scale={1.304}
+      />
+      <mesh
+        geometry={nodes.pngwingcom001.geometry}
+        material={materials["pngwing.com"]}
+        position={[-1.171, -0.353, 0.67]}
+        rotation={[-Math.PI / 2, 0, -Math.PI / 2]}
+        scale={1.333}
+      />
     </a.group>
   );
 }
